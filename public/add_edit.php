@@ -1,5 +1,5 @@
 <?php
-$title = "Simple PHP-CRUD - Contacts";
+$title = "Simple PHP-CRUD - Add / Edit Contacts";
 ?>
 
 <!DOCTYPE html>
@@ -14,6 +14,28 @@ $title = "Simple PHP-CRUD - Contacts";
 
 <body class="container">
     <h1><?php echo $title ?></h1>
+    <form action="">
+        <div class="mb-3">
+            <label for="name_first" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="name_first" placeholder="First Name">
+        </div>
+        <div class="mb-3">
+            <label for="name-last" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="name_last" placeholder="Last Name">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="mb-3">
+            <label for="birthdate" class="form-label">Birthdate</label>
+            <input type="date" class="form-control" id="birthdate" placeholder="Birthdate">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+            <a href="index.php" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
 </body>
 
 </html>

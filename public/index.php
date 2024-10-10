@@ -32,13 +32,13 @@ $title = "Simple PHP-CRUD - Contacts";
                 <td>test@test.com</td>
                 <td>1999-01-01</td>
                 <td>
-                    <a href="#" class="btn btn-primary">Edit</a>
-                    <a href="#" class="btn btn-danger">Delete</a>
+                    <a href="add_edit.php" class="btn btn-primary">Edit</a>
+                    <a href="delete.php" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         </tbody>
     </table>
-    <a href="#" class="btn btn-primary">Add Contact</a>
+    <a href="add_edit.php" class="btn btn-primary">Add Contact</a>
 </body>
 
 </html>
