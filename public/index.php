@@ -34,16 +34,16 @@ $contacts = $database->getContacts();
         </head>
         <tbody>
             <?php foreach ($contacts as $contacts): ?>
-            <tr>
-                <td><?php echo $contacts['name_first']; ?></td>
-                <td><?php echo $contacts['name_last']; ?></td>
-                <td><?php echo $contacts['email']; ?></td>
-                <td><?php echo $contacts['birthday']; ?></td>
-                <td>
-                    <a href="add_edit.php?id=<?php echo $contatct['id']; ?>" class="btn btn-primary">Edit</a>
-                    <a href="delete.php" class="btn btn-danger">Delete</a>
-                </td>
-            </tr>
+                <tr>
+                    <td><?php echo $contacts['name_first']; ?></td>
+                    <td><?php echo $contacts['name_last']; ?></td>
+                    <td><?php echo $contacts['email']; ?></td>
+                    <td><?php echo $contacts['birthdate']; ?></td>
+                    <td>
+                        <a href="add_edit.php?id=<?php echo $contacts['id']; ?>" class="btn btn-primary">Edit</a>
+                        <a href="delete.php?id=<?php echo $contacts['id']; ?>" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
