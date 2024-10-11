@@ -1,5 +1,12 @@
 <?php
+require_once "../app/Database.php";
+
+use App\Database;
+
+$database = new Database();
+
 $title = "Simple PHP-CRUD - Contacts";
+$contacts = $database->getContacts();
 ?>
 
 <!DOCTYPE html>
@@ -26,16 +33,18 @@ $title = "Simple PHP-CRUD - Contacts";
             </tr>
         </head>
         <tbody>
+            <?php foreach ($contacts as $contacts): ?>
             <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>test@test.com</td>
-                <td>1999-01-01</td>
+                <td><?php echo $contacts['name_first']; ?></td>
+                <td><?php echo $contacts['name_last']; ?></td>
+                <td><?php echo $contacts['email']; ?></td>
+                <td><?php echo $contacts['birthday']; ?></td>
                 <td>
-                    <a href="add_edit.php" class="btn btn-primary">Edit</a>
+                    <a href="add_edit.php?id=<?php echo $contatct['id']; ?>" class="btn btn-primary">Edit</a>
                     <a href="delete.php" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
     <a href="add_edit.php" class="btn btn-primary">Add Contact</a>

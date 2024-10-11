@@ -1,0 +1,28 @@
+# Ignore sensitive environment files
+.env
+
+# Ignore Composer's vendor directory (all the installed dependencies)
+vendor/
+
+# Ignore Composer's lock file if you're not committing it (optional)
+composer.lock
+
+# Ignore IDE configuration files (for example, PHPStorm, VSCode, etc.)
+.idea/
+.vscode/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and cache
+*.log
+*.cache
+
+# Ignore other unnecessary files (adjust based on your project)
+node_modules/
+public/assets/
+public/uploads/
+
+# Ignore database connection files (if not using dotenv)
+config/database.php
